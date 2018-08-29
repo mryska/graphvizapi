@@ -13,7 +13,7 @@ import org.enoir.graphvizapi.*;
  */
 public class apiExample {
 
-    private static String tmpPath = "/tmp";
+    private static String tmpPath = "/Users/mryska/prac/tmp";
     public static void main(String[] args)
     {
         apiExample ex = new apiExample ();

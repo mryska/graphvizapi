@@ -11,8 +11,10 @@ import java.util.Properties;
  */
 public class Graphviz {
 
-    private static String DOT = "dot";
-    private static String TMP_PATH = "/tmp";
+    //private static String DOT = "dot";
+    private static String DOT = "/usr/local/bin/dot";
+    //private static String TMP_PATH = "/tmp";
+    private static String TMP_PATH = "/Users/mryska/prac/tmp";
 
     /**
      * Constructor. The default graphviz command is "dot". Default tmp file path is "/tmp".

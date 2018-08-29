@@ -14,7 +14,7 @@ public class TestGraphviz {
 
     @Test
     public void testGenImage() {
-        Graphviz gz = new Graphviz("/usr/bin/dot","./");
+        Graphviz gz = new Graphviz("/usr/local/bin/dot","./");
         Graph graph = genSimpleGraph();
         String type = "png";
         byte[] bytearray = gz.getGraphByteArray(graph, type, "100");
