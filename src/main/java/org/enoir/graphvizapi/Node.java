@@ -14,6 +14,12 @@ public class Node extends BaseGraphObject {
         super(id);
     }
 
+    public Node(String id, String label) {
+        super(id);
+        this.addAttribute(new Attribute("label", "\"" + label + "\""));
+        this.addAttribute(new Attribute("shape", "box"));  // TODO
+    }
+
     @Override
     public String genDotString() {
         StringBuilder dotString = new StringBuilder();

@@ -31,6 +31,13 @@ public class Edge extends BaseGraphObject {
         this.toNode = toNode;
     }
 
+    public Edge(Node fromNode,Node toNode, String label){
+        super("");
+        this.fromNode = fromNode;
+        this.toNode = toNode;
+        this.addAttribute(new Attribute("label", "\"" + label  + "\""));
+    }
+
     /**
      * From node getter.
      * @return from Node
