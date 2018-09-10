@@ -36,6 +36,9 @@ public class Edge extends BaseGraphObject {
         this.fromNode = fromNode;
         this.toNode = toNode;
         this.addAttribute(new Attribute("label", "\"" + label  + "\""));
+        this.addAttribute(new Attribute("style", "bold"));  // TODO
+        this.addAttribute(new Attribute("arrowhead", "none"));  // TODO
+        this.addAttribute(new Attribute("splines", "line"));  // TODO
     }
 
     /**
