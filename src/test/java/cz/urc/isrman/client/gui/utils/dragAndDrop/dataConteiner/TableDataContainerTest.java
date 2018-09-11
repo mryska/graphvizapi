@@ -11,10 +11,12 @@ import org.junit.Test;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+import cz.urc.graph.container.NodesContainer;
+import cz.urc.graph.container.NodesContainerItem;
+
 public class TableDataContainerTest {
 
     
-    //private TableDataContainer container;
     private List<TableDataContainer> containers;
     
     @Before
@@ -37,6 +39,25 @@ public class TableDataContainerTest {
         System.out.println("containers = " + containers);
         System.out.println("container[0]=" + containers.get(0));
         assertNotNull(containers.get(0));
+    }
+
+    @Test
+    public final void testTableDataContainer2() {
+        assertNotNull(containers);
+        assertFalse(containers.isEmpty());
+        NodesContainer nodesContainer = new NodesContainer();
+        nodesContainer.addNodes(containers);
+        System.out.println("nodesContainer = " + nodesContainer.getNodeList());
+        NodesContainerItem item;
+        item = nodesContainer.findNodeByName("Jedle 312");
+        System.out.println(item);
+        item = nodesContainer.findNodeByName("Lípa 211");
+        System.out.println(item);
+        item = nodesContainer.findNodeById("Zásek69");
+        System.out.println(item);
+        item = nodesContainer.findNodeById("Bouře63");
+        System.out.println(item);
+        
     }
 
     static final String json = "[  \n" + 
