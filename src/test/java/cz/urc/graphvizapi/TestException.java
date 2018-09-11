@@ -1,13 +1,7 @@
 package cz.urc.graphvizapi;
-import org.enoir.graphvizapi.*;
 import org.junit.Assert;
 import org.junit.Test;
 
-import cz.urc.graphvizapi.Attribute;
-import cz.urc.graphvizapi.Graph;
-import cz.urc.graphvizapi.GraphType;
-import cz.urc.graphvizapi.Graphviz;
-import cz.urc.graphvizapi.Node;
 import cz.urc.graphvizapi.exception.AttributeNotFondException;
 import cz.urc.graphvizapi.exception.GraphException;
 

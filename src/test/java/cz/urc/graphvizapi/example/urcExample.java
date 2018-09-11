@@ -2,11 +2,6 @@ package cz.urc.graphvizapi.example;
 
 import java.io.File;
 import java.io.FileOutputStream;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Random;
-
-import org.enoir.graphvizapi.*;
 
 import cz.urc.graphvizapi.Attribute;
 import cz.urc.graphvizapi.Edge;

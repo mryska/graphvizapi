@@ -6,8 +6,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-import org.enoir.graphvizapi.*;
-
 import cz.urc.graphvizapi.Attribute;
 import cz.urc.graphvizapi.Edge;
 import cz.urc.graphvizapi.Graph;
