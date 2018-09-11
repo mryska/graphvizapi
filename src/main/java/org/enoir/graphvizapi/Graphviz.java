@@ -72,9 +72,10 @@ public class Graphviz {
         return img_stream;
     }
 
-    private String genDotStringByGraph(Graph graph){
+    public String genDotStringByGraph(Graph graph){
         StringBuilder dotString = new StringBuilder();
         if(graph.getGraphType() == GraphType.DIGRAPH){
+            //dotString.append("strict digraph ");
             dotString.append("digraph ");
 
         }else if(graph.getGraphType() == GraphType.GRPAH){

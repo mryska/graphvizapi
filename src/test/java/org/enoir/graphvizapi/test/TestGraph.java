@@ -1,6 +1,7 @@
 package org.enoir.graphvizapi.test;
 
-import junit.framework.Assert;
+import static org.junit.Assert.assertTrue;
+
 import org.enoir.graphvizapi.Edge;
 import org.enoir.graphvizapi.Graph;
 import org.enoir.graphvizapi.GraphType;
@@ -16,7 +17,7 @@ public class TestGraph {
         Graph g = new Graph("g1", GraphType.DIGRAPH);
         g.addEdge(new Edge(new Node("A"),new Node("B")));
         String dotString = g.genDotString();
-        Assert.assertTrue(dotString.contains("->"));
+        assertTrue(dotString.contains("->"));
     }
 
     @Test
@@ -24,6 +25,6 @@ public class TestGraph {
         Graph g = new Graph("g1", GraphType.GRPAH);
         g.addEdge(new Edge(new Node("A"),new Node("B")));
         String dotString = g.genDotString();
-        Assert.assertTrue(dotString.contains("--"));
+        assertTrue(dotString.contains("--"));
     }
 }

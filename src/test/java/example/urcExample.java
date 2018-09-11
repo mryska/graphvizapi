@@ -43,6 +43,12 @@ public class urcExample {
         graph.addEdge(new Edge(lipa21, lipa211, "35.5 MHz"));
         graph.addEdge(new Edge(lipa21, lipa222, "35.5 MHz"));
         graph.addEdge(new Edge(lipa21, lipa233, "35.5 MHz"));
+        
+     // opačný směr
+     // graph.addEdge(new Edge(lipa21, boure63, "53.725 MHz"));
+     // graph.addEdge(new Edge(lipa211, lipa21, "35.5 MHz"));
+     // graph.addEdge(new Edge(lipa222, lipa21, "35.5 MHz"));
+     // graph.addEdge(new Edge(lipa233, lipa21, "35.5 MHz"));
 
         Node pohroma69 = new Node("pohroma69", "Pohroma 69");
         Node siska691 = new Node("siska691", "Šiška 691");
@@ -65,14 +71,17 @@ public class urcExample {
         graph.addNode(pila111);
         graph.addNode(pila112);
         graph.addNode(pila113);
-        
+
         graph.addEdge(new Edge(boure63, pila11, "53.725 MH"));
         graph.addEdge(new Edge(pila11, pila111, "32.125 MHz"));
         graph.addEdge(new Edge(pila11, pila112, "32.125 MHz"));
         graph.addEdge(new Edge(pila11, pila113, "32.125 MHz"));
-         
-        
-        System.out.println("graph=" + graph.genDotString());
+
+
+        System.out.println("graph:");
+        System.out.println("=============================");
+        System.out.println(gv.genDotStringByGraph(graph));
+        System.out.println("=============================");
 
 
         String type = "png";

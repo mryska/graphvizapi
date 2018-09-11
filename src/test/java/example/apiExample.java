@@ -37,6 +37,11 @@ public class apiExample {
         graph.addEdge(new Edge("", n1, n2));
         graph.addEdge(new Edge("", n2, n3));
         graph.addEdge(new Edge("",n3,n1));
+        
+        System.out.println("graph:");
+        System.out.println("=============================");
+        System.out.println(gv.genDotStringByGraph(graph));
+        System.out.println("=============================");
 
 
         String type = "png";

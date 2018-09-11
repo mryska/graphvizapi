@@ -1,8 +1,9 @@
 package org.enoir.graphvizapi.test;
 
-import junit.framework.Assert;
 import org.enoir.graphvizapi.*;
 import org.junit.Test;
+
+import static org.junit.Assert.assertTrue;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
@@ -17,8 +18,11 @@ public class TestGraphviz {
         Graphviz gz = new Graphviz("/usr/local/bin/dot","./");
         Graph graph = genSimpleGraph();
         String type = "png";
+        System.out.println("=============================");
+        System.out.println(gz.genDotStringByGraph(graph));
+        System.out.println("=============================");
         byte[] bytearray = gz.getGraphByteArray(graph, type, "100");
-        Assert.assertTrue(bytearray.length>0);
+        assertTrue(bytearray.length>0);
     }
 
     @Test
@@ -28,7 +32,7 @@ public class TestGraphviz {
         Graph graph = genSimpleGraph();
         String type = "png";
         byte[] bytearray = gz.getGraphByteArray(graph, type, "100");
-        Assert.assertTrue(bytearray.length>0);
+        assertTrue(bytearray.length>0);
     }
     @Test
     public void testGenImageFail() {
@@ -41,7 +45,7 @@ public class TestGraphviz {
         }catch (Exception e){
 
         }
-        Assert.assertTrue(bytearray==null);
+        assertTrue(bytearray==null);
     }
 
     private String getByteArrayMd5(byte[] bytes){
