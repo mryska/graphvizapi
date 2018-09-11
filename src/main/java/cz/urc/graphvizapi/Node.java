@@ -1,9 +1,12 @@
 package cz.urc.graphvizapi;
 
+import lombok.ToString;
+
 /**
  * The Node class like Graphviz's node.
  * Created by frank on 2014/11/17.
  */
+@ToString
 public class Node extends BaseGraphObject {
 
     /**

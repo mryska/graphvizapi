@@ -4,12 +4,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 import cz.urc.graphvizapi.exception.AttributeNotFondException;
+import lombok.ToString;
 
 /**
  * The Graphviz graph base object. It can add one or more attribute to
  * description.
  * Created by frank on 2014/11/19.
  */
+@ToString
 public abstract class BaseGraphObject {
     private String id;
     private List<Attribute> attrList;

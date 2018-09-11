@@ -4,11 +4,13 @@ import java.io.*;
 import java.util.Properties;
 
 import cz.urc.graphvizapi.exception.GraphException;
+import lombok.ToString;
 
 /**
  * The Graphviz Class. Can use this class to generate image byte array.
  * Created by frank on 2014/11/17.
  */
+@ToString
 public class Graphviz {
 
     //private static String DOT = "dot";

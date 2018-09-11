@@ -1,9 +1,12 @@
 package cz.urc.graphvizapi;
 
+import lombok.ToString;
+
 /**
  * An Attribute Class. It will store graphviz attribute.
  * Created by frank on 2014/11/20.
  */
+@ToString
 public class Attribute {
     private String attrName;
     private String attrValue;

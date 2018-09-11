@@ -1,9 +1,12 @@
 package cz.urc.graphvizapi;
 
+import lombok.ToString;
+
 /**
  * The Edge class like Graphviz's edge.
  * Created by frank on 2014/11/20.
  */
+@ToString
 public class Edge extends BaseGraphObject {
     private Node fromNode;
     private Node toNode;

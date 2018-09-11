@@ -4,11 +4,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 import cz.urc.graphvizapi.exception.GraphException;
+import lombok.ToString;
 
 /**
  * The Graphviz Graph class. It also can use to build subgraph.
  * Created by frank on 2014/11/20.
  */
+@ToString
 public class Graph extends BaseGraphObject {
 
     private GraphType graphType;
