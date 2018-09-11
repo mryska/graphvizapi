@@ -1,6 +1,5 @@
 package cz.urc.graph.container;
 
-import lombok.AllArgsConstructor;
 import lombok.Data;
 
 @Data
