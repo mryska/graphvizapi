@@ -1,4 +1,4 @@
-package example;
+package cz.urc.graphvizapi.example;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -7,6 +7,13 @@ import java.util.List;
 import java.util.Random;
 
 import org.enoir.graphvizapi.*;
+
+import cz.urc.graphvizapi.Attribute;
+import cz.urc.graphvizapi.Edge;
+import cz.urc.graphvizapi.Graph;
+import cz.urc.graphvizapi.GraphType;
+import cz.urc.graphvizapi.Graphviz;
+import cz.urc.graphvizapi.Node;
 
 /**
  * Created by frank on 2014/11/20.

@@ -1,9 +1,15 @@
-package org.enoir.graphvizapi.test;
+package cz.urc.graphvizapi;
 import org.enoir.graphvizapi.*;
-import org.enoir.graphvizapi.exception.AttributeNotFondException;
-import org.enoir.graphvizapi.exception.GraphException;
 import org.junit.Assert;
 import org.junit.Test;
+
+import cz.urc.graphvizapi.Attribute;
+import cz.urc.graphvizapi.Graph;
+import cz.urc.graphvizapi.GraphType;
+import cz.urc.graphvizapi.Graphviz;
+import cz.urc.graphvizapi.Node;
+import cz.urc.graphvizapi.exception.AttributeNotFondException;
+import cz.urc.graphvizapi.exception.GraphException;
 
 /**
  * Created by frank on 2014/11/27.

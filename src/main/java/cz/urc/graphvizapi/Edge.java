@@ -1,4 +1,4 @@
-package org.enoir.graphvizapi;
+package cz.urc.graphvizapi;
 
 /**
  * The Edge class like Graphviz's edge.

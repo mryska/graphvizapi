@@ -1,4 +1,4 @@
-package org.enoir.graphvizapi;
+package cz.urc.graphvizapi;
 
 /**
  * The Node class like Graphviz's node.

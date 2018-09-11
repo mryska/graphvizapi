@@ -1,12 +1,13 @@
-package org.enoir.graphvizapi.test;
+package cz.urc.graphvizapi;
 
 import static org.junit.Assert.assertTrue;
 
-import org.enoir.graphvizapi.Edge;
-import org.enoir.graphvizapi.Graph;
-import org.enoir.graphvizapi.GraphType;
-import org.enoir.graphvizapi.Node;
 import org.junit.Test;
+
+import cz.urc.graphvizapi.Edge;
+import cz.urc.graphvizapi.Graph;
+import cz.urc.graphvizapi.GraphType;
+import cz.urc.graphvizapi.Node;
 
 /**
  * Created by frank on 2014/11/20.

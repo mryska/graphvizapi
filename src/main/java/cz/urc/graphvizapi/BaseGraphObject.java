@@ -1,9 +1,9 @@
-package org.enoir.graphvizapi;
-
-import org.enoir.graphvizapi.exception.AttributeNotFondException;
+package cz.urc.graphvizapi;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import cz.urc.graphvizapi.exception.AttributeNotFondException;
 
 /**
  * The Graphviz graph base object. It can add one or more attribute to

@@ -1,9 +1,9 @@
-package org.enoir.graphvizapi;
-
-import org.enoir.graphvizapi.exception.GraphException;
+package cz.urc.graphvizapi;
 
 import java.io.*;
 import java.util.Properties;
+
+import cz.urc.graphvizapi.exception.GraphException;
 
 /**
  * The Graphviz Class. Can use this class to generate image byte array.

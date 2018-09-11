@@ -1,4 +1,4 @@
-package org.enoir.graphvizapi;
+package cz.urc.graphvizapi;
 
 /**
  * An Attribute Class. It will store graphviz attribute.

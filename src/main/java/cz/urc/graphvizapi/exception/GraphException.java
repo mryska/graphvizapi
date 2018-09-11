@@ -1,4 +1,4 @@
-package org.enoir.graphvizapi.exception;
+package cz.urc.graphvizapi.exception;
 
 /**
  * Created by frank on 2015/2/10.

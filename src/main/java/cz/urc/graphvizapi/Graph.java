@@ -1,9 +1,9 @@
-package org.enoir.graphvizapi;
-
-import org.enoir.graphvizapi.exception.GraphException;
+package cz.urc.graphvizapi;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import cz.urc.graphvizapi.exception.GraphException;
 
 /**
  * The Graphviz Graph class. It also can use to build subgraph.

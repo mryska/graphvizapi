@@ -1,4 +1,4 @@
-package org.enoir.graphvizapi.exception;
+package cz.urc.graphvizapi.exception;
 
 /**
  * The Attribute not found Exception.
