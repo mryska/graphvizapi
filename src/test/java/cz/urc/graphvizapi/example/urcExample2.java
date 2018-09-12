@@ -3,9 +3,11 @@ package cz.urc.graphvizapi.example;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -29,6 +31,7 @@ public class urcExample2 {
 
     private static String tmpPath = "/Users/mryska/prac/tmp";
     
+    private List<TableDataContainer> parsedContainers;
     private List<TableDataContainer> containers;
 
    
@@ -42,11 +45,17 @@ public class urcExample2 {
     {
         try {
             ObjectMapper mapper = new ObjectMapper();
-            containers = mapper.readValue(json, new TypeReference<List<TableDataContainer>>() {
+            parsedContainers = mapper.readValue(json, new TypeReference<List<TableDataContainer>>() {
             });
         } catch (IOException ex) {
             ex.printStackTrace();
         }
+        System.out.println("parsedContainers=" + parsedContainers);
+        containers = parsedContainers
+        		.stream()
+        		.sorted(Comparator.comparing(TableDataContainer::getHierarchy))
+        		.collect(Collectors.toList());
+        System.out.println("containers=" + containers);
    	
         Graphviz gv = new Graphviz();
         Graph graph = new Graph("g1", GraphType.DIGRAPH);
