@@ -1,26 +1,45 @@
-package cz.urc.isrman.client.gui.utils.dragAndDrop.dataConteiner;
+package cz.urc.graphvizapi.example;
 
-import static org.junit.Assert.*;
-
+import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.util.HashMap;
 import java.util.List;
-
-import org.junit.Before;
-import org.junit.Test;
+import java.util.Map;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import cz.urc.graph.container.EdgesContainer;
+import cz.urc.graph.container.EdgesContainerItem;
 import cz.urc.graph.container.NodesContainer;
+import cz.urc.graph.container.NodesContainerItem;
+import cz.urc.graphvizapi.Attribute;
+import cz.urc.graphvizapi.Edge;
+import cz.urc.graphvizapi.Graph;
+import cz.urc.graphvizapi.GraphType;
+import cz.urc.graphvizapi.Graphviz;
+import cz.urc.graphvizapi.Node;
+import cz.urc.isrman.client.gui.utils.dragAndDrop.dataConteiner.TableDataContainer;
 
-public class TableDataContainerTest {
+/**
+ * Created by frank on 2014/11/20.
+ */
+public class urcExample2 {
 
+    private static String tmpPath = "/Users/mryska/prac/tmp";
     
     private List<TableDataContainer> containers;
-    
-    @Before
-    public void setUp() throws Exception {
+
+   
+    public static void main(String[] args)
+    {
+        urcExample2 ex = new urcExample2 ();
+        ex.draw0();
+    }
+
+    private void draw0()
+    {
         try {
             ObjectMapper mapper = new ObjectMapper();
             containers = mapper.readValue(json, new TypeReference<List<TableDataContainer>>() {
@@ -28,28 +47,53 @@ public class TableDataContainerTest {
         } catch (IOException ex) {
             ex.printStackTrace();
         }
-    }
-
-    @Test
-    public final void testTableDataContainer() {
-        assertNotNull(containers);
-        System.out.println("containers.size=" + containers.size());
-        assertFalse(containers.isEmpty());
-        assertTrue(containers.size() > 0);
-        System.out.println("containers = " + containers);
-        System.out.println("container[0]=" + containers.get(0));
-        assertNotNull(containers.get(0));
-    }
-
-    @Test
-    public final void testTableDataContainer2() {
-        assertNotNull(containers);
-        assertFalse(containers.isEmpty());
+   	
+        Graphviz gv = new Graphviz();
+        Graph graph = new Graph("g1", GraphType.DIGRAPH);
+        graph.addAttribute(new Attribute("rankdir", "TB"));
+        
         NodesContainer nodesContainer = new NodesContainer();
         nodesContainer.addNodes(containers);
-        System.out.println("nodesContainer = " + nodesContainer.getNodeList());
+        
+        List<NodesContainerItem> nodeList = nodesContainer.getNodeList();
+        Map<String,Node> nodeMap = new HashMap<>();
+        for (NodesContainerItem item : nodeList) {
+        	Node node = new Node(item.getId(), item.getName());
+        	graph.addNode(node);
+        	nodeMap.put(item.getId(), node);
+		}
+        
         EdgesContainer edgesContainer = new EdgesContainer();
         edgesContainer.addEdges(containers);
+
+        List<EdgesContainerItem> edgeList = edgesContainer.getEdgeList();
+        for (EdgesContainerItem item : edgeList) {
+        	String idNode1 = item.getIdNode1();
+        	String idNode2 = item.getIdNode2();
+        	Edge edge = new Edge(nodeMap.get(idNode1), nodeMap.get(idNode2), item.getEdgeName());
+        	graph.addEdge(edge);
+		}
+        
+        System.out.println("graph:");
+        System.out.println("=============================");
+        System.out.println(gv.genDotStringByGraph(graph));
+        System.out.println("=============================");
+
+
+        String type = "png";
+
+        File out = new File(tmpPath+"/outLINK0."+ type);
+        this.writeGraphToFile( gv.getGraphByteArray(graph, type, "100"), out );
+    }
+
+    public int writeGraphToFile(byte[] img, File to)
+    {
+        try {
+            FileOutputStream fos = new FileOutputStream(to);
+            fos.write(img);
+            fos.close();
+        } catch (java.io.IOException ioe) { return -1; }
+        return 1;
     }
 
     static final String json = "[  \n" + 
@@ -551,5 +595,6 @@ public class TableDataContainerTest {
             "      \"hierarchy\":4\n" + 
             "   }\n" + 
             "]";
+
 
 }

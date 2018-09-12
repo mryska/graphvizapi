@@ -7,6 +7,6 @@ public class EdgesContainerItem {
 
     private String idNode1;
     private String idNode2;
-    private String name;
+    private String edgeName;
 
 }
