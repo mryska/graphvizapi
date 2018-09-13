@@ -1,9 +1,9 @@
-package cz.urc.graphvizapi;
+package cz.urc.laparser.graph.graphvizapi;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import cz.urc.graphvizapi.exception.AttributeNotFondException;
+import cz.urc.laparser.graph.graphvizapi.exception.AttributeNotFondException;
 import lombok.ToString;
 
 /**

@@ -1,4 +1,4 @@
-package cz.urc.graph.container;
+package cz.urc.laparser.graph.container;
 
 import lombok.Data;
 

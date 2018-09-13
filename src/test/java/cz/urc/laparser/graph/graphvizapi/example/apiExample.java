@@ -1,4 +1,4 @@
-package cz.urc.graphvizapi.example;
+package cz.urc.laparser.graph.graphvizapi.example;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -6,12 +6,12 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-import cz.urc.graphvizapi.Attribute;
-import cz.urc.graphvizapi.Edge;
-import cz.urc.graphvizapi.Graph;
-import cz.urc.graphvizapi.GraphType;
-import cz.urc.graphvizapi.Graphviz;
-import cz.urc.graphvizapi.Node;
+import cz.urc.laparser.graph.graphvizapi.Attribute;
+import cz.urc.laparser.graph.graphvizapi.Edge;
+import cz.urc.laparser.graph.graphvizapi.Graph;
+import cz.urc.laparser.graph.graphvizapi.GraphType;
+import cz.urc.laparser.graph.graphvizapi.Graphviz;
+import cz.urc.laparser.graph.graphvizapi.Node;
 
 /**
  * Created by frank on 2014/11/20.

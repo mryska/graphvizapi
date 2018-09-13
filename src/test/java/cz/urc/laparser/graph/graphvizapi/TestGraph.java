@@ -1,8 +1,13 @@
-package cz.urc.graphvizapi;
+package cz.urc.laparser.graph.graphvizapi;
 
 import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
+
+import cz.urc.laparser.graph.graphvizapi.Edge;
+import cz.urc.laparser.graph.graphvizapi.Graph;
+import cz.urc.laparser.graph.graphvizapi.GraphType;
+import cz.urc.laparser.graph.graphvizapi.Node;
 
 /**
  * Created by frank on 2014/11/20.

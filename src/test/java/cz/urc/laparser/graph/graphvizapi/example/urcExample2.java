@@ -1,4 +1,4 @@
-package cz.urc.graphvizapi.example;
+package cz.urc.laparser.graph.graphvizapi.example;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -12,17 +12,17 @@ import java.util.stream.Collectors;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import cz.urc.graph.container.EdgesContainer;
-import cz.urc.graph.container.EdgesContainerItem;
-import cz.urc.graph.container.NodesContainer;
-import cz.urc.graph.container.NodesContainerItem;
-import cz.urc.graphvizapi.Attribute;
-import cz.urc.graphvizapi.Edge;
-import cz.urc.graphvizapi.Graph;
-import cz.urc.graphvizapi.GraphType;
-import cz.urc.graphvizapi.Graphviz;
-import cz.urc.graphvizapi.Node;
 import cz.urc.isrman.client.gui.utils.dragAndDrop.dataConteiner.TableDataContainer;
+import cz.urc.laparser.graph.container.EdgesContainer;
+import cz.urc.laparser.graph.container.EdgesContainerItem;
+import cz.urc.laparser.graph.container.NodesContainer;
+import cz.urc.laparser.graph.container.NodesContainerItem;
+import cz.urc.laparser.graph.graphvizapi.Attribute;
+import cz.urc.laparser.graph.graphvizapi.Edge;
+import cz.urc.laparser.graph.graphvizapi.Graph;
+import cz.urc.laparser.graph.graphvizapi.GraphType;
+import cz.urc.laparser.graph.graphvizapi.Graphviz;
+import cz.urc.laparser.graph.graphvizapi.Node;
 
 /**
  * Created by frank on 2014/11/20.

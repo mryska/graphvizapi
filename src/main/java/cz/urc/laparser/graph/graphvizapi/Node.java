@@ -1,4 +1,4 @@
-package cz.urc.graphvizapi;
+package cz.urc.laparser.graph.graphvizapi;
 
 import lombok.ToString;
 

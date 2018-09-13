@@ -11,8 +11,8 @@ import org.junit.Test;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import cz.urc.graph.container.EdgesContainer;
-import cz.urc.graph.container.NodesContainer;
+import cz.urc.laparser.graph.container.EdgesContainer;
+import cz.urc.laparser.graph.container.NodesContainer;
 
 public class TableDataContainerTest {
 

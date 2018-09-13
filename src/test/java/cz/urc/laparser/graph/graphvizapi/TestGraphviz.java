@@ -1,4 +1,4 @@
-package cz.urc.graphvizapi;
+package cz.urc.laparser.graph.graphvizapi;
 
 import static org.junit.Assert.assertTrue;
 
@@ -6,6 +6,13 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
 import org.junit.Test;
+
+import cz.urc.laparser.graph.graphvizapi.Attribute;
+import cz.urc.laparser.graph.graphvizapi.Edge;
+import cz.urc.laparser.graph.graphvizapi.Graph;
+import cz.urc.laparser.graph.graphvizapi.GraphType;
+import cz.urc.laparser.graph.graphvizapi.Graphviz;
+import cz.urc.laparser.graph.graphvizapi.Node;
 
 /**
  * Created by frank on 2014/11/21.

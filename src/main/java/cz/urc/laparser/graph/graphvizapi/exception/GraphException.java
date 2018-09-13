@@ -1,4 +1,4 @@
-package cz.urc.graphvizapi.exception;
+package cz.urc.laparser.graph.graphvizapi.exception;
 
 /**
  * Created by frank on 2015/2/10.

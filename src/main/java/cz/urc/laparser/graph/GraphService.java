@@ -1,25 +1,34 @@
-package cz.urc.graph;
+package cz.urc.laparser.graph;
 
+import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
-import cz.urc.graph.container.EdgesContainer;
-import cz.urc.graph.container.EdgesContainerItem;
-import cz.urc.graph.container.NodesContainer;
-import cz.urc.graph.container.NodesContainerItem;
-import cz.urc.graphvizapi.Attribute;
-import cz.urc.graphvizapi.Edge;
-import cz.urc.graphvizapi.Graph;
-import cz.urc.graphvizapi.GraphType;
-import cz.urc.graphvizapi.Graphviz;
-import cz.urc.graphvizapi.Node;
 import cz.urc.isrman.client.gui.utils.dragAndDrop.dataConteiner.TableDataContainer;
+import cz.urc.laparser.graph.container.EdgesContainer;
+import cz.urc.laparser.graph.container.EdgesContainerItem;
+import cz.urc.laparser.graph.container.NodesContainer;
+import cz.urc.laparser.graph.container.NodesContainerItem;
+import cz.urc.laparser.graph.graphvizapi.Attribute;
+import cz.urc.laparser.graph.graphvizapi.Edge;
+import cz.urc.laparser.graph.graphvizapi.Graph;
+import cz.urc.laparser.graph.graphvizapi.GraphType;
+import cz.urc.laparser.graph.graphvizapi.Graphviz;
+import cz.urc.laparser.graph.graphvizapi.Node;
 
 public class GraphService {
     
     
-    public static String convertToGraphviz(List<TableDataContainer> containers) {
+    public static String convertToGraphviz(List<TableDataContainer> inputContainers) {
+
+        List<TableDataContainer> containers;
+        containers = inputContainers
+                .stream()
+                .sorted(Comparator.comparing(TableDataContainer::getHierarchy))
+                .collect(Collectors.toList());
+        
         Graphviz gv = new Graphviz();
         Graph graph = new Graph("g1", GraphType.DIGRAPH);
         graph.addAttribute(new Attribute("rankdir", "TB"));

@@ -1,4 +1,4 @@
-package cz.urc.graph.container;
+package cz.urc.laparser.graph.container;
 
 import java.util.ArrayList;
 import java.util.List;

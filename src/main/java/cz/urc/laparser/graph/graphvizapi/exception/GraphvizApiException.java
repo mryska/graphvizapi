@@ -1,4 +1,4 @@
-package cz.urc.graphvizapi.exception;
+package cz.urc.laparser.graph.graphvizapi.exception;
 
 /**
  * GraphvizApi Base Exception.

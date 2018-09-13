@@ -1,4 +1,4 @@
-package cz.urc.graphvizapi.example;
+package cz.urc.laparser.graph.graphvizapi.example;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -14,19 +14,19 @@ import java.util.Map;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import cz.urc.graph.GraphService;
-import cz.urc.graph.container.EdgesContainer;
-import cz.urc.graph.container.EdgesContainerItem;
-import cz.urc.graph.container.NodesContainer;
-import cz.urc.graph.container.NodesContainerItem;
-import cz.urc.graphvizapi.Attribute;
-import cz.urc.graphvizapi.Edge;
-import cz.urc.graphvizapi.Graph;
-import cz.urc.graphvizapi.GraphType;
-import cz.urc.graphvizapi.Graphviz;
-import cz.urc.graphvizapi.Node;
-import cz.urc.graphvizapi.exception.GraphException;
 import cz.urc.isrman.client.gui.utils.dragAndDrop.dataConteiner.TableDataContainer;
+import cz.urc.laparser.graph.GraphService;
+import cz.urc.laparser.graph.container.EdgesContainer;
+import cz.urc.laparser.graph.container.EdgesContainerItem;
+import cz.urc.laparser.graph.container.NodesContainer;
+import cz.urc.laparser.graph.container.NodesContainerItem;
+import cz.urc.laparser.graph.graphvizapi.Attribute;
+import cz.urc.laparser.graph.graphvizapi.Edge;
+import cz.urc.laparser.graph.graphvizapi.Graph;
+import cz.urc.laparser.graph.graphvizapi.GraphType;
+import cz.urc.laparser.graph.graphvizapi.Graphviz;
+import cz.urc.laparser.graph.graphvizapi.Node;
+import cz.urc.laparser.graph.graphvizapi.exception.GraphException;
 
 /**
  * Created by frank on 2014/11/20.
@@ -68,7 +68,7 @@ public class urcExample3 {
 
         String type = "png";
 
-        File out = new File(tmpPath+"/outLINK0."+ type);
+        File out = new File(tmpPath+"/outLINK0-ex3."+ type);
         this.writeGraphToFile( getGraphByteArray(graphvizStr, type, "100"), out );
     }
 

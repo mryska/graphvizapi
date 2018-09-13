@@ -1,9 +1,9 @@
-package cz.urc.graphvizapi;
+package cz.urc.laparser.graph.graphvizapi;
 
 import java.io.*;
 import java.util.Properties;
 
-import cz.urc.graphvizapi.exception.GraphException;
+import cz.urc.laparser.graph.graphvizapi.exception.GraphException;
 import lombok.ToString;
 
 /**
